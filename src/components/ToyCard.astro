@@ -1,0 +1,106 @@
+---
+import Icon from './Icon.astro';
+import { getStatusConfig, getCategoryLabel } from '../utils/status';
+
+interface Props {
+  toy: {
+    slug: string;
+    name: string;
+    category: string;
+    status: string;
+    mediaType: string;
+    shortDescription: string;
+    pricePln: number | null;
+    images: Array<{ src: string; alt: string }>;
+  };
+}
+
+const { toy } = Astro.props;
+const statusConfig = getStatusConfig(toy.status);
+const mainImage = toy.images[0] || { src: '/placeholder.webp', alt: toy.name };
+---
+
+<article
+  class="toy-card group bg-white rounded-xl border border-[#E5E0D8] overflow-hidden flex flex-col card-shadow"
+  data-category={toy.category}
+  data-status={toy.status}
+  data-media-type={toy.mediaType}
+>
+  <a href={`/zabawki/${toy.slug}`} class="block relative overflow-hidden bg-stone-100 aspect-[4/5] w-full">
+    <!-- Image with constant aspect ratio 4/5 and object-cover to guarantee CLS = 0 -->
+    <img
+      src={mainImage.src}
+      alt={mainImage.alt}
+      loading="lazy"
+      decoding="async"
+      class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
+    />
+
+    <!-- AI concept badge (top-left) -->
+    {toy.mediaType === 'ai_concept' && (
+      <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold badge-ai shadow-md">
+        <Icon name="sparkle" class="w-3.5 h-3.5 text-amber-300" />
+        <span>Wizualizacja AI</span>
+      </div>
+    )}
+
+    <!-- Real photo badge (top-left) -->
+    {toy.mediaType === 'real_photo' && (
+      <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-950/80 backdrop-blur-md text-emerald-200 border border-emerald-500/30 shadow-md">
+        <Icon name="check" class="w-3.5 h-3.5 text-emerald-300" />
+        <span>Prawdziwe zdjęcie</span>
+      </div>
+    )}
+
+    <!-- Status badge (top-right) -->
+    <div class="absolute top-3 right-3">
+      <span class={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border shadow-sm backdrop-blur-md bg-white/95 ${statusConfig.badgeClass}`}>
+        <span class={`w-1.5 h-1.5 rounded-full ${statusConfig.dotClass}`}></span>
+        {statusConfig.label}
+      </span>
+    </div>
+  </a>
+
+  <!-- Content -->
+  <div class="p-4 sm:p-5 flex flex-col flex-grow justify-between bg-white">
+    <div>
+      <div class="flex items-center justify-between text-xs text-craft-muted mb-1.5">
+        <span class="uppercase tracking-wider font-semibold text-[10px] text-craft-accent">
+          {getCategoryLabel(toy.category)}
+        </span>
+      </div>
+
+      <h3 class="font-bold text-base text-craft-dark group-hover:text-craft-accent transition-colors">
+        <a href={`/zabawki/${toy.slug}`}>
+          {toy.name}
+        </a>
+      </h3>
+
+      <p class="text-xs sm:text-sm text-craft-muted mt-1.5 line-clamp-2 leading-relaxed">
+        {toy.shortDescription}
+      </p>
+    </div>
+
+    <div class="mt-4 pt-3 border-t border-[#F0ECE4] flex items-center justify-between">
+      {toy.pricePln !== null ? (
+        <span class="text-base font-extrabold text-craft-dark">
+          {toy.pricePln} <span class="text-xs font-normal text-craft-muted">zł</span>
+        </span>
+      ) : (
+        <span class="text-xs font-medium text-craft-muted italic">
+          Projekt koncepcyjny
+        </span>
+      )}
+
+      <a
+        href={`/zabawki/${toy.slug}`}
+        class="inline-flex items-center gap-1 text-xs font-semibold text-craft-accent hover:text-craft-accent-hover transition-colors"
+      >
+        <span>Zobacz detale</span>
+        <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</article>

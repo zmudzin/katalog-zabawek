@@ -1,0 +1,125 @@
+---
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  ogType?: string;
+}
+
+const {
+  title = "Pracownia Zabawek — Ręcznie Dziergane Figurki i Amigurumi",
+  description = "Katalog autorskich, ręcznie robionych zabawek i figurek kolekcjonerskich. Post-apo, sci-fi, retro i zwierzaki z bawełny i wełny.",
+  image = "/images/toys/ai/cyber-kot.webp",
+  ogType = "website"
+} = Astro.props;
+
+// Ensure absolute or proper URL for OG image
+const siteUrl = "https://zabawki.losia3.xyz";
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+---
+
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D95D39'><circle cx='12' cy='12' r='9'/><path d='M12 3a9 9 0 0 1 7.79 4.5M3 12a9 9 0 0 1 9-9M6 18c2-3 5-6 9-6' stroke='%23ffffff' stroke-width='2'/></svg>" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook / Instagram -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={fullImageUrl} />
+    <meta property="og:site_name" content="Pracownia Zabawek Rękodzielniczych" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullImageUrl} />
+  </head>
+  <body class="bg-[#F7F4EF] text-[#1C1E21] min-h-screen flex flex-col antialiased selection:bg-[#D95D39]/20 selection:text-[#1C1E21]">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-40 bg-[#F7F4EF]/90 backdrop-blur-md border-b border-[#E5E0D8] transition-all">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-2.5 text-craft-dark font-bold text-lg tracking-tight hover:text-craft-accent transition-colors group">
+          <span class="w-8 h-8 rounded-lg bg-craft-accent text-white flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform">
+            <Icon name="yarn" class="w-5 h-5 text-white" />
+          </span>
+          <span class="font-extrabold tracking-tight">Pracownia Splotów</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="flex items-center gap-6 text-sm font-medium">
+          <a href="/#katalog" class="text-craft-muted hover:text-craft-dark transition-colors py-1">Katalog</a>
+          <a href="/#jak-powstaje" class="text-craft-muted hover:text-craft-dark transition-colors py-1 hidden sm:inline">Jak to powstaje</a>
+          <a href="/#kontakt" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-craft-dark text-white text-xs font-semibold hover:bg-craft-accent transition-colors">
+            <Icon name="mail" class="w-3.5 h-3.5" />
+            <span>Kontakt</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content Slot -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 border-t border-[#E5E0D8] bg-[#F3EFE8]/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-7 h-7 rounded bg-craft-accent text-white flex items-center justify-center">
+                <Icon name="yarn" class="w-4 h-4 text-white" />
+              </span>
+              <span class="font-bold text-base text-craft-dark">Pracownia Splotów</span>
+            </div>
+            <p class="text-sm text-craft-muted leading-relaxed">
+              Autorskie figurki amigurumi tworzone z pasją do splotów i nietypowych motywów. Sci-Fi, post-apo i urocze zwierzaki.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-sm text-craft-dark mb-3">Szybkie linki</h4>
+            <ul class="space-y-2 text-sm text-craft-muted">
+              <li><a href="/#katalog" class="hover:text-craft-accent transition-colors">Katalog wszystkich zabawek</a></li>
+              <li><a href="/#jak-powstaje" class="hover:text-craft-accent transition-colors">O procesie tworzenia</a></li>
+              <li><a href="/#kontakt" class="hover:text-craft-accent transition-colors">Zamówienia indywidualne</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-sm text-craft-dark mb-3">Kontakt & Zamówienia</h4>
+            <p class="text-sm text-craft-muted mb-3">
+              Chcesz zamówić maskotkę według własnego pomysłu lub zarezerwować gotowy egzemplarz?
+            </p>
+            <a href="mailto:kontakt@losia3.xyz?subject=Pytanie o zabawki" class="inline-flex items-center gap-2 text-sm font-semibold text-craft-accent hover:underline">
+              <Icon name="mail" class="w-4 h-4" />
+              <span>kontakt@losia3.xyz</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="pt-8 border-t border-[#E5E0D8] flex flex-col sm:flex-row items-center justify-between text-xs text-craft-muted gap-4">
+          <p>© {new Date().getFullYear()} Pracownia Splotów · losia3.xyz · Wszelkie prawa zastrzeżone.</p>
+          <div class="flex items-center gap-4">
+            <span>Styl ikon: <a href="https://icons8.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-craft-dark">Icons8</a></span>
+            <span>·</span>
+            <span>Hostowane na <a href="https://pages.cloudflare.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-craft-dark">Cloudflare Pages</a></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

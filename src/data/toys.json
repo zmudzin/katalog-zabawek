@@ -1,0 +1,340 @@
+[
+  {
+    "slug": "cyber-kot",
+    "name": "Cyber-Kot",
+    "category": "sci-fi",
+    "status": "available",
+    "mediaType": "real_photo",
+    "shortDescription": "Grafitowo-czarny kot z neonowym różowym wizjerem cybernetycznym.",
+    "fullDescription": "Gotowy egzemplarz wykonany ręcznie na szydełku z miękkiej przędzy bawełnianej. Zwieńczony kontrastującym, jarzącym się w świetle UV różowym wizjerem cybernetycznym. Kotek siedzi stabilnie, nie przewraca się i idealnie pilnuje biurka programisty lub gracza.",
+    "pricePln": 145,
+    "specs": {
+      "heightCm": 18,
+      "materials": ["100% bawełna czesana", "neonowa przędza akrylowa", "antyalergiczna kulka silikonowa"],
+      "leadTime": "wysyłka w 24–48h",
+      "ageNote": "Figurka dekoracyjna / kolekcjonerska (zawiera drobne elementy)"
+    },
+    "images": [
+      {
+        "src": "/images/toys/real/cyber-kot-01.webp",
+        "alt": "Ręcznie robiony Cyber-Kot z różowym neonowym wizjerem — widok główny"
+      },
+      {
+        "src": "/images/toys/ai/cyber-kot.webp",
+        "alt": "Cyber-Kot ujęcie w świetle studyjnym"
+      }
+    ]
+  },
+  {
+    "slug": "czerw-pustyni",
+    "name": "Sakiewka Czerw Pustyni",
+    "category": "fantastyka",
+    "status": "available",
+    "mediaType": "real_photo",
+    "shortDescription": "Funkcjonalny woreczek na kości RPG w formie żebrowanego czerwa.",
+    "fullDescription": "Gęsto dziergana sakiewka z piaskowej bawełny, inspirowana legendarnymi gigantycznymi czerwiami pustyni. Posiada solidny ściągacz ze sznurka oraz elastyczną paszczę usianą dziesiątkami filcowych ząbków. Mieści swobodnie do 5 kompletów standardowych kości wielościennych lub inne cenne artefakty.",
+    "pricePln": 120,
+    "specs": {
+      "heightCm": 21,
+      "materials": ["bawełna z domieszką lnu", "sznurek jutowy", "filc techniczny"],
+      "leadTime": "wysyłka w 24–48h",
+      "ageNote": "Odpowiednia dla graczy RPG w każdym wieku"
+    },
+    "images": [
+      {
+        "src": "/images/toys/real/czerw-pustyni-01.webp",
+        "alt": "Sakiewka na kości Czerw Pustyni — widok z góry na paszczę"
+      },
+      {
+        "src": "/images/toys/ai/czerw-pustyni.webp",
+        "alt": "Czerw Pustyni w pełnej okazałości"
+      }
+    ]
+  },
+  {
+    "slug": "zwiadowca-z-pustkowi",
+    "name": "Zwiadowca z Pustkowi",
+    "category": "post-apo",
+    "status": "concept",
+    "mediaType": "ai_concept",
+    "shortDescription": "Oliwkowa peleryna z kapturem i miniaturowa maska przeciwgazowa.",
+    "fullDescription": "Koncept figurki samotnego włóczęgi ze świata zrujnowanej cywilizacji. Gruba wełniana narzuta w kolorze wojskowej oliwki, ręcznie formowana maska gazowa z szarych splotów oraz parciany pas na ekwipunek. Projekt w fazie prototypowania.",
+    "pricePln": null,
+    "specs": {
+      "heightCm": 19,
+      "materials": ["wełna merynosowa", "bawełna recyklingowa", "skóra ekologiczna"],
+      "leadTime": "w fazie prototypu (ok. 7 dni po premierze)",
+      "ageNote": "Figurka dekoracyjna (zawiera drobne detale)"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/zwiadowca-z-pustkowi.webp",
+        "alt": "Wizualizacja zwiadowcy w kapturze i masce przeciwgazowej"
+      }
+    ]
+  },
+  {
+    "slug": "szop-meloman",
+    "name": "Szop Meloman",
+    "category": "retro",
+    "status": "made_to_order",
+    "mediaType": "ai_concept",
+    "shortDescription": "Pręgowany szop w kultowych pomarańczowych słuchawkach z lat 80.",
+    "fullDescription": "Uroczy szop z gęstej szaro-białej przędzy, wyposażony w oldschoolowe słuchawki retro z charakterystyczną pomarańczową gąbką i metalowym pałąkiem. Posiada puszysty pasiasty ogonek i bezpieczne haftowane detale.",
+    "pricePln": 160,
+    "specs": {
+      "heightCm": 17,
+      "materials": ["bawełna z akrylem", "pianka modelarska", "drut powlekany"],
+      "leadTime": "ok. 5–7 dni roboczych",
+      "ageNote": "Zabawka dekoracyjna z metalowym pałąkiem"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/szop-meloman.webp",
+        "alt": "Wizualizacja szopa w pomarańczowych słuchawkach retro"
+      }
+    ]
+  },
+  {
+    "slug": "tele-glowa",
+    "name": "Tele-Głowa Vintage",
+    "category": "retro",
+    "status": "available",
+    "mediaType": "ai_concept",
+    "shortDescription": "Postać w musztardowym swetrze z kineskopowym monitorem CRT.",
+    "fullDescription": "Nostalgiczne połączenie rzemiosła i retro-technologii lat 90. Ciało odziane w ciepły musztardowy sweterek o wyraźnym warkoczowym splocie, a głowa to kubiczny beżowy monitor komputerowy z ciemnym kineskopem.",
+    "pricePln": 175,
+    "specs": {
+      "heightCm": 20,
+      "materials": ["100% włóczka wełniana", "pianka usztywniająca", "antyalergiczne wypełnienie"],
+      "leadTime": "wysyłka w 48h",
+      "ageNote": "Figurka kolekcjonerska dla miłośników retro techu"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/tele-glowa.webp",
+        "alt": "Wizualizacja figurki Tele-Głowa w musztardowym sweterku"
+      }
+    ]
+  },
+  {
+    "slug": "cyber-aksolotl",
+    "name": "Cyber Aksolotl",
+    "category": "zwierzaki",
+    "status": "in_progress",
+    "mediaType": "ai_concept",
+    "shortDescription": "Różowy wodny stworek z neonowo-błękitnymi i fioletowymi skrzelami.",
+    "fullDescription": "Wyjątkowo miękki aksolotl amigurumi w pastelowym pudrowym różu. Błyszczące, wielowarstwowe pierzaste skrzela wykonane zostały z neonowej nici w odcieniach cyjanu i elektrycznego fioletu. Właśnie powstaje na drutach w pracowni!",
+    "pricePln": 135,
+    "specs": {
+      "heightCm": 16,
+      "materials": ["aksamitna przędza chenille", "neonowa nić bawełniana", "zaciskowe oczka safety eyes"],
+      "leadTime": "dostępny za 3 dni",
+      "ageNote": "Super miękka — bezpieczna dla starszych dzieci"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/cyber-aksolotl.webp",
+        "alt": "Wizualizacja różowego aksalotla z neonowymi skrzelami"
+      }
+    ]
+  },
+  {
+    "slug": "zaba-taktyczna",
+    "name": "Żaba Taktyczna NVG",
+    "category": "post-apo",
+    "status": "available",
+    "mediaType": "ai_concept",
+    "shortDescription": "Pulchna zielona żabka z goglami noktowizyjnymi na uprzęży.",
+    "fullDescription": "Taktyczny płaz stworzony do nocnych operacji specjalnych. Wykonany z grubej, mięsistej oliwkowo-zielonej przędzy. Na głowie ma miniaturowe gogle noktowizyjne z czterema soczewkami zamocowane na elastycznym parcianym pasku.",
+    "pricePln": 150,
+    "specs": {
+      "heightCm": 15,
+      "materials": ["gruba bawełna czesana", "taśma nośna", "akryl modelarski"],
+      "leadTime": "wysyłka w 24–48h",
+      "ageNote": "Figurka dekoracyjna"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/zaba-taktyczna.webp",
+        "alt": "Wizualizacja zielonej żaby w goglach noktowizyjnych"
+      }
+    ]
+  },
+  {
+    "slug": "haker-widmo",
+    "name": "Haker Widmo",
+    "category": "sci-fi",
+    "status": "sold",
+    "mediaType": "ai_concept",
+    "shortDescription": "Tajemnicza postać w grafitowej bluzie z kapturem i jarzącym się wizjerem.",
+    "fullDescription": "Figurka w surowym klimacie darknetu i nocnych ulic cyberpunkowej metropolii. Bardzo głęboki kaptur skrywa całą twarz, z której bije jedynie wąska niebieska smuga świetlna. Egzemplarz z pierwszej serii limitowanej — znalazł już swojego właściciela.",
+    "pricePln": 180,
+    "specs": {
+      "heightCm": 20,
+      "materials": ["antracytowa wełna z alpaką", "przędza fluorescencyjna", "filc"],
+      "leadTime": "egzemplarz sprzedany (możliwe wykonanie na zamówienie)",
+      "ageNote": "Figurka kolekcjonerska"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/haker-widmo.webp",
+        "alt": "Wizualizacja Hakera Widmo w grafitowym kapturze"
+      }
+    ]
+  },
+  {
+    "slug": "kaczka-pilotka",
+    "name": "Kaczka Pilotka",
+    "category": "retro",
+    "status": "made_to_order",
+    "mediaType": "ai_concept",
+    "shortDescription": "Klasyczna żółta kaczuszka w filcowym kasku lotniczym i goglach.",
+    "fullDescription": "Radosne i pełne humoru połączenie klasycznej gumowej kaczki kąpielowej z duchem pionierów lotnictwa. Wykonana ze słonecznie żółtej wełny, zaopatrzona w oliwkowy kask ze skóry ekologicznej i filcu oraz gogle na skórzanym pasku.",
+    "pricePln": 140,
+    "specs": {
+      "heightCm": 16,
+      "materials": ["100% wełna owcza", "filc rzemieślniczy", "elementy ekoskóry"],
+      "leadTime": "ok. 4–6 dni",
+      "ageNote": "Zabawka dekoracyjna"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/kaczka-pilotka.webp",
+        "alt": "Wizualizacja żółtej kaczki w kasku lotnika"
+      }
+    ]
+  },
+  {
+    "slug": "punk-z-pustkowi",
+    "name": "Punk z Pustkowi",
+    "category": "post-apo",
+    "status": "available",
+    "mediaType": "ai_concept",
+    "shortDescription": "Kamizelka z ekoskóry i jaskrawy pomarańczowy irokez.",
+    "fullDescription": "Prawdziwy weteran postapokaliptycznych szlaków. Ręcznie zszywana kamizelka motocyklowa z ćwiekami z nici metalizowanej, zadziorny stojący irokez z usztywnianej pomarańczowej przędzy i bezbłędny charakter.",
+    "pricePln": 165,
+    "specs": {
+      "heightCm": 22,
+      "materials": ["bawełna recyklingowa", "ekoskóra", "metalizowane nici"],
+      "leadTime": "wysyłka w 24–48h",
+      "ageNote": "Kolekcjonerska lalka artystyczna"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/punk-z-pustkowi.webp",
+        "alt": "Wizualizacja Punka z pomarańczowym irokezem"
+      }
+    ]
+  },
+  {
+    "slug": "chomik-bunkrowy",
+    "name": "Chomik Bunkrowy",
+    "category": "zwierzaki",
+    "status": "available",
+    "mediaType": "ai_concept",
+    "shortDescription": "Ekstremalnie pulchny beżowy chomik w uroczej masce gazowej.",
+    "fullDescription": "Najbardziej uroczy mieszkaniec schronu przeciwatomowego. Pękaty, okrąglutki brzuszek z kremowej przędzy bawełnianej i precyzyjnie wydziergana miniaturowa maska z dwoma srebrzystymi filtrami.",
+    "pricePln": 135,
+    "specs": {
+      "heightCm": 14,
+      "materials": ["bawełna z jedwabiem", "szara wełna czesankowa", "wypełnienie silikonowe"],
+      "leadTime": "wysyłka w 24–48h",
+      "ageNote": "Urocza figurka na biurko"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/chomik-bunkrowy.webp",
+        "alt": "Wizualizacja pulchnego chomika w masce przeciwgazowej"
+      }
+    ]
+  },
+  {
+    "slug": "kosmonauta-apollo",
+    "name": "Kosmonauta Apollo",
+    "category": "sci-fi",
+    "status": "made_to_order",
+    "mediaType": "ai_concept",
+    "shortDescription": "Śnieżnobiały kombinezon kosmiczny ze złotym haftowanym wizjerem.",
+    "fullDescription": "Kultowy wzór inspirowany złotą erą podboju kosmosu. Śnieżnobiały, gęsty splot ze wzmocnionymi nakolannikami, panel aparatury tlenowej na klatce piersiowej z małymi guziczkami oraz lśniący, złoty wizjer z metalizowanej muliny.",
+    "pricePln": 190,
+    "specs": {
+      "heightCm": 21,
+      "materials": ["biała wełna czesana", "złota mulina metalizowana", "guziki z tworzywa"],
+      "leadTime": "ok. 6–8 dni",
+      "ageNote": "Figurka dekoracyjna"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/kosmonauta-apollo.webp",
+        "alt": "Wizualizacja astronauty w białym skafandrze ze złotym wizjerem"
+      }
+    ]
+  },
+  {
+    "slug": "cyber-dywersant",
+    "name": "Cyber Dywersant",
+    "category": "sci-fi",
+    "status": "concept",
+    "mediaType": "ai_concept",
+    "shortDescription": "Ciemnoszary miejski runner z neonowo-błękitnym irokezem.",
+    "fullDescription": "Minimalistyczna figurka z surowej grafitowej przędzy o wyrazistej fakturze. Ozdobiona sterczącym irokezem w kolorze neon cyan. Projekt nowej serii kompaktowych figurek biurkowych.",
+    "pricePln": null,
+    "specs": {
+      "heightCm": 17,
+      "materials": ["antracytowa wełna zgrzebna", "neonowa nić poliestrowa"],
+      "leadTime": "koncept (zbieramy opinie przed realizacją)",
+      "ageNote": "Figurka dekoracyjna"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/cyber-dywersant.webp",
+        "alt": "Wizualizacja grafitowego dywersanta z neonowym irokezem"
+      }
+    ]
+  },
+  {
+    "slug": "straznik-wydm",
+    "name": "Strażnik Wydm",
+    "category": "fantastyka",
+    "status": "in_progress",
+    "mediaType": "ai_concept",
+    "shortDescription": "Koczownik w grafitowym kombinezonie z postrzępionym woalem.",
+    "fullDescription": "Postać inspirowana pustynnymi wojownikami z Arrakis. Ciemny, dopasowany kombinezon z żebrowanymi ściągaczami przypominającymi filtfrakcję, a twarz i szyja owinięte postrzępioną, postarzaną chustą z naturalnego lnu.",
+    "pricePln": 170,
+    "specs": {
+      "heightCm": 20,
+      "materials": ["wełna alpaki", "surowy len", "miedziane pierścienie"],
+      "leadTime": "w trakcie dziergania (dostępny za ok. 4 dni)",
+      "ageNote": "Figurka kolekcjonerska"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/straznik-wydm.webp",
+        "alt": "Wizualizacja Strażnika Wydm w pustynnym szalu"
+      }
+    ]
+  },
+  {
+    "slug": "szperacz-zlomu",
+    "name": "Szperacz Złomu",
+    "category": "post-apo",
+    "status": "available",
+    "mediaType": "ai_concept",
+    "shortDescription": "Figurka z surowego płótna workowego, sznurka i lnianych bandaży.",
+    "fullDescription": "Niezwykle klimatyczna lalka z naturalnych, zgrzebnych materiałów: grubej juty, surowego sznurka konopnego i postarzanych bandaży lnianych. Każda sztuka ma unikalne przetarcia i zacieki, co nadaje jej niepowtarzalny charakter reliktu starego świata.",
+    "pricePln": 125,
+    "specs": {
+      "heightCm": 18,
+      "materials": ["juta naturalna", "sznurek konopny", "bandaże z lnu", "drewniane guziki"],
+      "leadTime": "wysyłka w 24–48h",
+      "ageNote": "Figurka dekoracyjna w stylu folk/primitive craft"
+    },
+    "images": [
+      {
+        "src": "/images/toys/ai/szperacz-zlomu.webp",
+        "alt": "Wizualizacja Szperacza Złomu z juty i sznurka"
+      }
+    ]
+  }
+]

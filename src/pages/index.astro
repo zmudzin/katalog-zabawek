@@ -1,0 +1,352 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ToyCard from '../components/ToyCard.astro';
+import Icon from '../components/Icon.astro';
+import toysData from '../data/toys.json';
+
+const allCategories = [
+  { id: 'all', label: 'Wszystkie', icon: 'all' },
+  { id: 'sci-fi', label: 'Sci-Fi', icon: 'robot' },
+  { id: 'post-apo', label: 'Post-Apo', icon: 'gasmask' },
+  { id: 'retro', label: 'Retro', icon: 'retro' },
+  { id: 'zwierzaki', label: 'Zwierzaki', icon: 'paw' },
+  { id: 'fantastyka', label: 'Fantastyka', icon: 'dragon' },
+];
+
+const featuredToy = toysData.find(t => t.slug === 'cyber-kot') || toysData[0];
+---
+
+<Layout
+  title="Pracownia Splotów — Ręcznie Dziergane Figurki i Amigurumi"
+  description="Katalog autorskich zabawek i figurek kolekcjonerskich dzierganych na drutach i szydełku. Zero plastiku, 100% rzemiosła."
+>
+  <!-- Hero Section (Compact, ~50-60vh) -->
+  <section class="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-16 border-b border-[#E5E0D8] bg-gradient-to-b from-white to-[#F7F4EF]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="md:col-span-7 flex flex-col items-start">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-craft-accent/10 border border-craft-accent/20 text-craft-accent text-xs font-bold tracking-wide uppercase mb-4">
+            <Icon name="yarn" class="w-3.5 h-3.5" />
+            <span>Manufaktura Rękodzieła</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-craft-dark tracking-tight leading-[1.15]">
+            Dziergane figurki z charakterem. <span class="text-craft-accent">Nie z fabryki.</span>
+          </h1>
+
+          <p class="mt-4 text-base sm:text-lg text-craft-muted leading-relaxed max-w-xl">
+            Ręcznie tworzone amigurumi inspirowane światami sci-fi, postapokalipsą i retro technologią. Każdy egzemplarz to unikat z naturalnych przędz i autorskich detali.
+          </p>
+
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a
+              href="#katalog"
+              class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-craft-dark text-white font-bold text-sm hover:bg-craft-accent transition-all shadow-md group"
+            >
+              <span>Przeglądaj katalog</span>
+              <svg class="w-4 h-4 transform group-hover:translate-y-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+
+            <a
+              href="#jak-powstaje"
+              class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white border border-[#E5E0D8] text-craft-dark font-semibold text-sm hover:border-craft-dark transition-all"
+            >
+              <span>Jak to powstaje</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Highlight Card -->
+        <div class="md:col-span-5">
+          <div class="relative bg-white p-3 rounded-2xl border border-[#E5E0D8] card-shadow max-w-sm mx-auto group">
+            <div class="aspect-[4/5] rounded-xl overflow-hidden relative bg-stone-100">
+              <img
+                src={featuredToy.images[0].src}
+                alt={featuredToy.name}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute top-3 left-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-950/80 backdrop-blur-md text-emerald-200 border border-emerald-500/30">
+                <Icon name="check" class="w-3.5 h-3.5 text-emerald-300" />
+                <span>Wyróżniony projekt</span>
+              </div>
+            </div>
+
+            <div class="p-3 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-bold text-craft-accent uppercase tracking-wider">Gotowy egzemplarz</span>
+                <h3 class="font-bold text-sm text-craft-dark">{featuredToy.name}</h3>
+              </div>
+              <a
+                href={`/zabawki/${featuredToy.slug}`}
+                class="px-3 py-1.5 rounded-lg bg-stone-100 hover:bg-craft-dark hover:text-white text-xs font-bold transition-colors"
+              >
+                Zobacz →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section (#katalog) -->
+  <section id="katalog" class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 scroll-mt-20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-craft-dark tracking-tight">
+          Katalog pracowni
+        </h2>
+        <p class="text-sm text-craft-muted mt-1">
+          Wybierz kategorię lub przefiltruj, by zobaczyć tylko gotowe do wysyłki egzemplarze.
+        </p>
+      </div>
+
+      <!-- Live Counter -->
+      <div class="text-xs font-semibold text-craft-muted bg-white px-3.5 py-1.5 rounded-full border border-[#E5E0D8] inline-flex items-center gap-2 self-start md:self-auto">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span id="toy-counter">Pokazuję {toysData.length} z {toysData.length} zabawek</span>
+      </div>
+    </div>
+
+    <!-- Filter Bar (Client-Side JS) -->
+    <div class="bg-white p-3 sm:p-4 rounded-2xl border border-[#E5E0D8] shadow-sm mb-8 flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
+      <!-- Categories Pills -->
+      <div class="flex flex-wrap gap-1.5 sm:gap-2" id="category-filters">
+        {allCategories.map((cat, idx) => (
+          <button
+            type="button"
+            data-category-btn={cat.id}
+            class={`filter-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
+              idx === 0
+                ? 'bg-craft-dark text-white shadow-sm'
+                : 'bg-stone-100 text-craft-dark hover:bg-stone-200'
+            }`}
+          >
+            <Icon name={cat.icon} class="w-3.5 h-3.5" />
+            <span>{cat.label}</span>
+          </button>
+        ))}
+      </div>
+
+      <!-- Real Photos Toggle -->
+      <label class="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-[#F7F4EF] hover:bg-stone-200/70 border border-[#E5E0D8] cursor-pointer text-xs sm:text-sm font-semibold text-craft-dark transition-colors select-none self-start md:self-auto">
+        <input
+          type="checkbox"
+          id="real-photos-toggle"
+          class="w-4 h-4 rounded text-craft-accent focus:ring-craft-accent border-gray-300 rounded cursor-pointer"
+        />
+        <Icon name="camera" class="w-4 h-4 text-craft-accent" />
+        <span>Tylko gotowe (prawdziwe zdjęcia)</span>
+      </label>
+    </div>
+
+    <!-- Toys Grid: 1 col (mobile), 2 cols (tablet), 3 cols (desktop) -->
+    <div
+      id="toys-grid"
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+    >
+      {toysData.map((toy) => (
+        <ToyCard toy={toy} />
+      ))}
+    </div>
+
+    <!-- Empty State -->
+    <div id="no-results" class="hidden text-center py-16 px-4 bg-white rounded-2xl border border-[#E5E0D8] mt-6">
+      <div class="w-12 h-12 rounded-full bg-stone-100 text-craft-muted flex items-center justify-center mx-auto mb-3">
+        <Icon name="yarn" class="w-6 h-6 text-craft-muted" />
+      </div>
+      <h3 class="text-base font-bold text-craft-dark">Brak zabawek w tej konfiguracji</h3>
+      <p class="text-xs sm:text-sm text-craft-muted mt-1 max-w-sm mx-auto">
+        Spróbuj odznaczyć filtr „Tylko gotowe” lub wybrać inną kategorię zabawek.
+      </p>
+      <button
+        type="button"
+        id="reset-filters-btn"
+        class="mt-4 px-4 py-2 rounded-xl bg-craft-dark text-white text-xs font-semibold hover:bg-craft-accent transition-colors"
+      >
+        Pokaż wszystkie zabawki
+      </button>
+    </div>
+  </section>
+
+  <!-- How It's Made Section (#jak-powstaje) -->
+  <section id="jak-powstaje" class="border-t border-[#E5E0D8] bg-white py-14 sm:py-20 scroll-mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+        <span class="text-xs font-bold text-craft-accent uppercase tracking-wider">Filozofia pracowni</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-craft-dark tracking-tight mt-1">
+          Jak powstają nasze maskotki?
+        </h2>
+        <p class="text-sm text-craft-muted mt-2">
+          Od pierwszego szkicu i koncepcji cyfrowej, po ręczne nawijanie włóczki i ostatni ścieg.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Step 1 -->
+        <div class="p-6 rounded-2xl bg-[#F7F4EF] border border-[#E5E0D8] flex flex-col items-start">
+          <div class="w-12 h-12 rounded-xl bg-craft-dark text-white flex items-center justify-center mb-4 shadow-sm">
+            <Icon name="needle" class="w-6 h-6" />
+          </div>
+          <span class="text-xs font-bold text-craft-accent uppercase tracking-wider">Krok 01</span>
+          <h3 class="font-bold text-base text-craft-dark mt-1 mb-2">Ręczne dzierganie</h3>
+          <p class="text-sm text-craft-muted leading-relaxed">
+            Żadnych maszyn przemysłowych. Używamy certyfikowanej bawełny, miękkiej wełny i hipoalergicznych wypełnień bezpiecznych dla zdrowia.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-6 rounded-2xl bg-[#F7F4EF] border border-[#E5E0D8] flex flex-col items-start">
+          <div class="w-12 h-12 rounded-xl bg-craft-dark text-white flex items-center justify-center mb-4 shadow-sm">
+            <Icon name="scissors" class="w-6 h-6" />
+          </div>
+          <span class="text-xs font-bold text-craft-accent uppercase tracking-wider">Krok 02</span>
+          <h3 class="font-bold text-base text-craft-dark mt-1 mb-2">Autorskie detale</h3>
+          <p class="text-sm text-craft-muted leading-relaxed">
+            Dodatki z filcu, impregnowanej washpapy, ekoskóry czy neonowej przędzy sprawiają, że każda postać zyskuje swój unikalny charakter.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-6 rounded-2xl bg-[#F7F4EF] border border-[#E5E0D8] flex flex-col items-start">
+          <div class="w-12 h-12 rounded-xl bg-craft-dark text-white flex items-center justify-center mb-4 shadow-sm">
+            <Icon name="fingerprint" class="w-6 h-6" />
+          </div>
+          <span class="text-xs font-bold text-craft-accent uppercase tracking-wider">Krok 03</span>
+          <h3 class="font-bold text-base text-craft-dark mt-1 mb-2">Pojedyncze egzemplarze</h3>
+          <p class="text-sm text-craft-muted leading-relaxed">
+            Każda zabawka jest rękodziełem. Nawet przy powtórzeniu wzoru dwie sztuki różnią się drobnymi niuansami splotu.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section (#kontakt) -->
+  <section id="kontakt" class="border-t border-[#E5E0D8] py-14 sm:py-20 scroll-mt-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="bg-craft-dark text-white rounded-3xl p-8 sm:p-12 shadow-xl relative overflow-hidden text-center sm:text-left">
+        
+        <div class="relative z-10 grid grid-cols-1 sm:grid-cols-12 gap-8 items-center">
+          <div class="sm:col-span-8">
+            <span class="text-xs font-bold text-craft-accent uppercase tracking-wider">Złóż zapytanie</span>
+            <h2 class="text-2xl sm:text-3xl font-black tracking-tight mt-1 mb-3">
+              Chcesz zamówić unikatową zabawkę?
+            </h2>
+            <p class="text-sm sm:text-base text-stone-300 leading-relaxed max-w-md">
+              Masz własny pomysł na postać, chcesz zarezerwować egzemplarz w trakcie dziergania albo zapytać o prototyp ze zdjęcia AI? Napisz bezpośrednio.
+            </p>
+          </div>
+
+          <div class="sm:col-span-4 flex flex-col sm:items-end justify-center gap-3">
+            <a
+              href="mailto:kontakt@losia3.xyz?subject=Zapytanie z katalogu zabawek"
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-craft-accent text-white font-bold text-sm shadow-md hover:bg-craft-accent-hover transition-colors"
+            >
+              <Icon name="mail" class="w-4 h-4" />
+              <span>Napisz e-mail</span>
+            </a>
+
+            <span class="text-[11px] text-stone-400 text-center sm:text-right">
+              Odpowiadam zazwyczaj w 24h
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Client-side filter script -->
+  <script>
+    let activeCategory = 'all';
+    let onlyRealPhotos = false;
+
+    const cards = document.querySelectorAll<HTMLElement>('.toy-card');
+    const categoryButtons = document.querySelectorAll<HTMLButtonElement>('[data-category-btn]');
+    const realToggle = document.getElementById('real-photos-toggle') as HTMLInputElement;
+    const counter = document.getElementById('toy-counter');
+    const noResults = document.getElementById('no-results');
+    const resetBtn = document.getElementById('reset-filters-btn');
+    const totalCount = cards.length;
+
+    function applyFilters() {
+      let visibleCount = 0;
+
+      cards.forEach((card) => {
+        const cat = card.dataset.category || '';
+        const media = card.dataset.mediaType || '';
+
+        const catMatches = activeCategory === 'all' || cat === activeCategory;
+        const realMatches = !onlyRealPhotos || media === 'real_photo';
+
+        if (catMatches && realMatches) {
+          card.style.display = '';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (counter) {
+        counter.textContent = `Pokazuję ${visibleCount} z ${totalCount} zabawek`;
+      }
+
+      if (noResults) {
+        if (visibleCount === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
+      }
+    }
+
+    categoryButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-category-btn') || 'all';
+        activeCategory = cat;
+
+        categoryButtons.forEach((b) => {
+          b.classList.remove('bg-craft-dark', 'text-white', 'shadow-sm');
+          b.classList.add('bg-stone-100', 'text-craft-dark');
+        });
+        btn.classList.add('bg-craft-dark', 'text-white', 'shadow-sm');
+        btn.classList.remove('bg-stone-100', 'text-craft-dark');
+
+        applyFilters();
+      });
+    });
+
+    if (realToggle) {
+      realToggle.addEventListener('change', () => {
+        onlyRealPhotos = realToggle.checked;
+        applyFilters();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        activeCategory = 'all';
+        onlyRealPhotos = false;
+        if (realToggle) realToggle.checked = false;
+
+        categoryButtons.forEach((b) => {
+          if (b.getAttribute('data-category-btn') === 'all') {
+            b.classList.add('bg-craft-dark', 'text-white', 'shadow-sm');
+            b.classList.remove('bg-stone-100', 'text-craft-dark');
+          } else {
+            b.classList.remove('bg-craft-dark', 'text-white', 'shadow-sm');
+            b.classList.add('bg-stone-100', 'text-craft-dark');
+          }
+        });
+
+        applyFilters();
+      });
+    }
+  </script>
+</Layout>
